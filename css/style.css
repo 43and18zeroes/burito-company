@@ -4,4 +4,19 @@ body {
 body header {
   height: 191px;
   border-bottom: 1px solid grey;
+}
+body main {
+  display: flex;
+  justify-content: center;
+}
+body main .container {
+  width: 1000px;
+  display: flex;
+}
+body main .container .left__sidebar {
+  width: 300px;
+  border: 1px solid grey;
+}
+body main .container .div__content {
+  border: 1px solid grey;
 }/*# sourceMappingURL=style.css.map */
