@@ -1,0 +1,32 @@
+Positive Rückmeldung & Aufgabe von XXX GmbH erhalten:
+
+Hallo Herr Mustermann,
+
+vielen Dank für Ihren Rückruf und das nette Telefonat von eben.
+
+Wie bereits mitgeteilt bitten wir Sie folgende Aufgabe zu lösen und bis zum 09.10.2020 einzureichen:
+
+Funktionale Anforderungen:
+
+- Es existiert ein Model Warenkorb (Warenkorb soll ein Objekt sein)
+- Es existiert ein Produktmodel (Produkte sollen Objekte sein) [Junus: Ignorieren]
+- Der Warenkorb beinhaltet Produkte (Produkterzeugung getrennt von Warenkorberzeugung)
+- Produkte werden zum Warenkorb hinzugefügt und erhalten eine Quantität 
+- Ein Warenkorb kann einen absoluten oder prozentualen Rabatt haben (nur auf Warenkorb-Ebene) 
+- Es soll ein Programm geschrieben werden, welches einen bestehenden Warenkorb berechnet und darstellt 
+
+
+Nichtfunktionale Anforderungen:
+
+- Die Umsetzung des Warenkorbs und der Produkte soll mit "JavaScript" erfolgen
+- Umsetzung soll objektorientiert erfolgen
+- Es soll eine Spezifikation erstellt werden. Die Spezifikation soll den grundlegenden Aufbau des Projekts darstellen und dient als Leitfaden für die Implementierung der Software
+
+Hinweise
+
+- Es wird Wert auf einen guten Stil und die Einhaltung von gängigen Pattern und Programmierparadigmen gelegt
+
+Sollten Sie Fragen haben, können Sie sich gern an uns wenden.
+
+Beste Grüße
+HR Manager
