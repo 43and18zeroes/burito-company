@@ -1,3 +1,7 @@
-header {
-  height: 50px;
+body {
+  margin: 0;
+}
+body header {
+  height: 191px;
+  border-bottom: 1px solid grey;
 }/*# sourceMappingURL=style.css.map */
