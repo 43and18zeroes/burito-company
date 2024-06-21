@@ -25,10 +25,13 @@ body {
 
                 .content__header {
                     padding: 16px;
+                    border: 1px solid grey;
                 }
 
                 .content__results {
-                    padding: 16px;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    // padding: 16px;
 
                     .result__card {
                         display: flex;
