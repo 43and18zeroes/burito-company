@@ -23,7 +23,9 @@ const productList = {
                 </div>
             </div>
         `;
+      prodList.append(prodEl);
     }
+    renderHook.append(prodList);
   },
 };
-// productList.render();
+productList.render();
