@@ -19,4 +19,8 @@ body main .container .left__sidebar {
 }
 body main .container .div__content {
   border: 1px solid grey;
+  padding: 16px;
+}
+body main .container .content__results {
+  padding: 16px;
 }/*# sourceMappingURL=style.css.map */
