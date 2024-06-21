@@ -8,6 +8,7 @@ body header {
 body main {
   display: flex;
   justify-content: center;
+  background-color: #fcfcfc;
 }
 body main .container {
   width: 1000px;
@@ -28,6 +29,8 @@ body main .container .div__content .content__results {
 }
 body main .container .div__content .content__results .result__card {
   display: flex;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 body main .container .div__content .content__results .result__card img {
   width: 287px;

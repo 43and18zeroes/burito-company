@@ -9,6 +9,7 @@ body {
     main {
         display: flex;
         justify-content: center;
+        background-color: #fcfcfc;
 
         .container {
             width: 1000px;
@@ -31,6 +32,8 @@ body {
 
                     .result__card {
                         display: flex;
+                        background-color: white;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
 
                         img {
                             width: 287px;
