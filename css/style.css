@@ -26,8 +26,9 @@ body main .container .div__content .content__header {
   border: 1px solid grey;
 }
 body main .container .div__content .content__results {
-  padding-left: 16px;
-  padding-right: 16px;
+  margin: 0;
+  border: 1px solid grey;
+  padding: 16px;
 }
 body main .container .div__content .content__results .result__card {
   display: flex;
