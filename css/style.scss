@@ -28,6 +28,15 @@ body {
 
                 .content__results {
                     padding: 16px;
+
+                    .result__card {
+                        display: flex;
+
+                        img {
+                            width: 287px;
+                            height: 136px;
+                        }
+                    }
                 }
             }
         }

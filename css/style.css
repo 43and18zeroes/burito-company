@@ -25,4 +25,11 @@ body main .container .div__content .content__header {
 }
 body main .container .div__content .content__results {
   padding: 16px;
+}
+body main .container .div__content .content__results .result__card {
+  display: flex;
+}
+body main .container .div__content .content__results .result__card img {
+  width: 287px;
+  height: 136px;
 }/*# sourceMappingURL=style.css.map */
