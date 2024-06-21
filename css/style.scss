@@ -46,6 +46,10 @@ body {
                             height: 136px;
                         }
                     }
+
+                    .result__card:last-child {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }

@@ -39,4 +39,7 @@ body main .container .div__content .content__results .result__card {
 body main .container .div__content .content__results .result__card img {
   width: 287px;
   height: 136px;
+}
+body main .container .div__content .content__results .result__card:last-child {
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
