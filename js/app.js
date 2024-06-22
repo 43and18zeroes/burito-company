@@ -24,11 +24,15 @@ class ProductItem {
         <img src="${this.product.imageUrl}" alt="${this.product.title}" />
       </div>
       <div class="card__content">
+        <div class="content__left">
           <h3>${this.product.title}</h3>
           <div id="product-container" class="content__description">
-              ${this.product.description}
+            ${this.product.description}
           </div>
+        </div>
+        <div class="content__right">
           <button>Add to cart</button>
+        </div>
       </div>
     `;
     const addCartButton = prodEl.querySelector('button');

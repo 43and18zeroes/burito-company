@@ -43,6 +43,10 @@ body main .container .div__content .content__results .result__card .image__conta
      object-fit: cover; /* Ensures image covers the box */
   -o-object-position: center;
      object-position: center; /* Centers the image */
+  display: block;
+}
+body main .container .div__content .content__results .result__card .card__content {
+  display: flex;
 }
 body main .container .div__content .content__results .result__card:last-child {
   margin-bottom: 0;
