@@ -52,6 +52,12 @@ body {
 
             .card__content {
               display: flex;
+
+              .content__left {
+                .card__header {
+                  display: flex;
+                }
+              }
             }
           }
 

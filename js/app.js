@@ -59,8 +59,10 @@ class ProductItem {
       </div>
       <div class="card__content">
         <div class="content__left">
-          <h2>${this.product.title}</h2>
-          <h3>\$${this.product.price}</h3>
+          <div class="card__header">
+            <h2>${this.product.title}</h2>
+            <h3>\$${this.product.price}</h3>
+          </div>
           <div id="product-container" class="content__description">
             ${this.product.description}
           </div>

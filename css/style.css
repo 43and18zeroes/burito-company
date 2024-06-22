@@ -48,6 +48,9 @@ body main .container .div__content .content__results .result__card .image__conta
 body main .container .div__content .content__results .result__card .card__content {
   display: flex;
 }
+body main .container .div__content .content__results .result__card .card__content .content__left .card__header {
+  display: flex;
+}
 body main .container .div__content .content__results .result__card:last-child {
   margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
