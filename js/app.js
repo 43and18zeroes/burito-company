@@ -1,17 +1,32 @@
 class Product {
-  constructor(title, image, desc) {
+  constructor(title, image, desc, price) {
     this.title = title;
     this.imageUrl = image;
     this.description = desc;
+    this.price = price;
   }
 }
 
 class ShoppingCart {
   items = [];
 
+  set cartItems(value) {
+    this.items = value;
+    this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount.toFixed(2)}</h2>`;
+  }
+
+  get totalAmount() {
+    const sum = this.items.reduce(
+      (prevValue, curItem) => prevValue + curItem.price,
+      0
+    );
+    return sum;
+  }
+
   addProduct(product) {
-    this.items.push(product);
-    this.totalOutput.innerHTML = `<h2>Total: \$${1}</h2>`;
+    const updatedItems = [...this.items];
+    updatedItems.push(product);
+    this.cartItems = updatedItems;
   }
 
   render() {
@@ -65,27 +80,32 @@ class ProductList {
     new Product(
       'Big Burito',
       'img/01.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      9.99
     ),
     new Product(
       'Saucy Burito',
       'img/02.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      10.99
     ),
     new Product(
       'Hot Burito',
       'img/03.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      11.99
     ),
     new Product(
       'Burito Bunch',
       'img/04.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      12.99
     ),
     new Product(
       'Burito Deluxe',
       'img/05.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      13.99
     ),
   ];
 
