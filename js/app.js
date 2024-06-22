@@ -11,6 +11,11 @@ class ProductItem {
     this.product = product;
   }
 
+  addToCart() {
+    console.log('Adding product to cart...');
+    console.log(this.product);
+  }
+
   render() {
     const prodEl = document.createElement('li');
     prodEl.className = 'result__card';
@@ -23,8 +28,11 @@ class ProductItem {
           <div id="product-container" class="content__description">
               ${this.product.description}
           </div>
+          <button>Add to cart</button>
       </div>
     `;
+    const addCartButton = prodEl.querySelector('button');
+    addCartButton.addEventListener('click', this.addToCart.bind(this));
     return prodEl;
   }
 }
@@ -34,27 +42,27 @@ class ProductList {
     new Product(
       'Big Burito',
       'img/01.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     ),
     new Product(
       'Saucy Burito',
       'img/02.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     ),
     new Product(
       'Hot Burito',
       'img/03.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     ),
     new Product(
       'Burito Bunch',
       'img/04.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     ),
     new Product(
       'Burito Deluxe',
       'img/05.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     ),
   ];
 
