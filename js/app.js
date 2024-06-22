@@ -39,7 +39,9 @@ const productList = {
       const prodEl = document.createElement('li');
       prodEl.className = 'result__card';
       prodEl.innerHTML = `
-            <img src="${prod.imageUrl}" alt="${prod.title}" />
+            <div class="image__container">
+              <img src="${prod.imageUrl}" alt="${prod.title}" />
+            </div>
             <div class="card__content">
                 <h3>${prod.title}</h3>
                 <div id="product-container" class="content__description">
