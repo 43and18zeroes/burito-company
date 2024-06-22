@@ -46,31 +46,31 @@ class ProductList {
     new Product(
       'Big Burito',
       'img/01.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     ),
     new Product(
       'Saucy Burito',
       'img/02.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     ),
     new Product(
       'Hot Burito',
       'img/03.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     ),
     new Product(
       'Burito Bunch',
       'img/04.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     ),
     new Product(
       'Burito Deluxe',
       'img/05.jpg',
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
     ),
   ];
 
-  constructor() {};
+  constructor() {}
 
   render() {
     const renderHook = document.getElementById('product-container');
@@ -83,6 +83,6 @@ class ProductList {
     }
     renderHook.append(prodList);
   }
-};
+}
 const productList = new ProductList();
 productList.render();
