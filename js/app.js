@@ -1,3 +1,15 @@
+class Product {
+  title;
+  imageUrl;
+  description;
+
+  constructor(title, imageUrl, description) {
+    this.title = title;
+    this.imageUrl = imageUrl;
+    this.description = description;
+  }
+}
+
 const productList = {
   products: [
     {
