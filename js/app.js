@@ -13,20 +13,20 @@ const productList = {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     {
-      title: 'Saucy Burito',
-      imageUrl: 'img/02.jpg',
+      title: 'Hot Burito',
+      imageUrl: 'img/03.jpg',
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     {
-      title: 'Saucy Burito',
-      imageUrl: 'img/02.jpg',
+      title: 'Burito Bunch',
+      imageUrl: 'img/04.jpg',
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     {
-      title: 'Saucy Burito',
-      imageUrl: 'img/02.jpg',
+      title: 'Burito Deluxe',
+      imageUrl: 'img/05.jpg',
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
