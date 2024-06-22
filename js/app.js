@@ -59,7 +59,8 @@ class ProductItem {
       </div>
       <div class="card__content">
         <div class="content__left">
-          <h3>${this.product.title}</h3>
+          <h2>${this.product.title}</h2>
+          <h3>\$${this.product.price}</h3>
           <div id="product-container" class="content__description">
             ${this.product.description}
           </div>
@@ -80,31 +81,31 @@ class ProductList {
     new Product(
       'Big Burito',
       'img/01.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'Lorem Ipsum is simply dummy text of the printing.',
       9.99
     ),
     new Product(
       'Saucy Burito',
       'img/02.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'Lorem Ipsum is simply dummy text of the printing.',
       10.99
     ),
     new Product(
       'Hot Burito',
       'img/03.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'Lorem Ipsum is simply dummy text of the printing.',
       11.99
     ),
     new Product(
       'Burito Bunch',
       'img/04.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'Lorem Ipsum is simply dummy text of the printing.',
       12.99
     ),
     new Product(
       'Burito Deluxe',
       'img/05.jpg',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'Lorem Ipsum is simply dummy text of the printing.',
       13.99
     ),
   ];
