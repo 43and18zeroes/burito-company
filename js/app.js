@@ -68,7 +68,7 @@ class ShoppingCart extends Component {
   }
 
   render() {
-    const cartEl = document.createElement('section', 'cart');
+    const cartEl = document.createRootElement('section', 'cart');
     cartEl.innerHTML = `
       <h2>Total: \$${0}</h2>
       <button>Order Now!</button>
@@ -77,9 +77,11 @@ class ShoppingCart extends Component {
   }
 }
 
-class ProductItem {
-  constructor(product) {
+class ProductItem extends Component {
+  constructor(product, renderHookId) {
+    super(renderHookId, false);
     this.product = product;
+    this.render();
   }
 
   addToCart() {
@@ -87,7 +89,7 @@ class ProductItem {
   }
 
   render() {
-    const prodEl = document.createElement('li');
+    const prodEl = document.createRootElement('li', 'product-item');
     prodEl.className = 'result__card';
     prodEl.innerHTML = `
       <div class="image__container">
@@ -110,11 +112,10 @@ class ProductItem {
     `;
     const addCartButton = prodEl.querySelector('button');
     addCartButton.addEventListener('click', this.addToCart.bind(this));
-    return prodEl;
   }
 }
 
-class ProductList {
+class ProductList extends Component {
   products = [
     new Product(
       'Big Burito',
