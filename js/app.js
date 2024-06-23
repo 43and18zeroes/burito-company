@@ -155,10 +155,15 @@ class ProductList extends Component {
         'Lorem Ipsum is simply dummy text of the printing.',
         13.99
       ),
-    ]
-  };
+    ];
+    this.renderProducts();
+  }
 
-  constructor() {}
+  renderProducts() {
+    for (const prod of this.products) {
+      new ProductItem(prod, 'prod-list');
+    }
+  }
 
   render() {
     const prodList = document.createElement('ul');
