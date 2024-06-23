@@ -116,38 +116,47 @@ class ProductItem extends Component {
 }
 
 class ProductList extends Component {
-  products = [
-    new Product(
-      'Big Burito',
-      'img/01.jpg',
-      'Lorem Ipsum is simply dummy text of the printing.',
-      9.99
-    ),
-    new Product(
-      'Saucy Burito',
-      'img/02.jpg',
-      'Lorem Ipsum is simply dummy text of the printing.',
-      10.99
-    ),
-    new Product(
-      'Hot Burito',
-      'img/03.jpg',
-      'Lorem Ipsum is simply dummy text of the printing.',
-      11.99
-    ),
-    new Product(
-      'Burito Bunch',
-      'img/04.jpg',
-      'Lorem Ipsum is simply dummy text of the printing.',
-      12.99
-    ),
-    new Product(
-      'Burito Deluxe',
-      'img/05.jpg',
-      'Lorem Ipsum is simply dummy text of the printing.',
-      13.99
-    ),
-  ];
+  products = [];
+
+  constructor(renderHookId) {
+    super(renderHookId);
+    this.fetchProducts();
+  }
+
+  fetchProducts() {
+    this.products = [
+      new Product(
+        'Big Burito',
+        'img/01.jpg',
+        'Lorem Ipsum is simply dummy text of the printing.',
+        9.99
+      ),
+      new Product(
+        'Saucy Burito',
+        'img/02.jpg',
+        'Lorem Ipsum is simply dummy text of the printing.',
+        10.99
+      ),
+      new Product(
+        'Hot Burito',
+        'img/03.jpg',
+        'Lorem Ipsum is simply dummy text of the printing.',
+        11.99
+      ),
+      new Product(
+        'Burito Bunch',
+        'img/04.jpg',
+        'Lorem Ipsum is simply dummy text of the printing.',
+        12.99
+      ),
+      new Product(
+        'Burito Deluxe',
+        'img/05.jpg',
+        'Lorem Ipsum is simply dummy text of the printing.',
+        13.99
+      ),
+    ]
+  };
 
   constructor() {}
 
