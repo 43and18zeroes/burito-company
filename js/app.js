@@ -166,36 +166,34 @@ class ProductList extends Component {
   }
 
   render() {
-    const prodList = document.createElement('ul');
-    prodList.className = 'content__results';
-    for (const prod of this.products) {
-      const productItem = new ProductItem(prod);
-      const prodEl = productItem.render();
-      prodList.append(prodEl);
+    this.createRootElement('ul', 'product-list', [
+      new ElementAttribute('id', 'prod-list'),
+    ]);
+    if (this.products && this.products.length > 0) {
+      this.renderProducts();
     }
-    return prodList;
   }
 }
 
 class Shop {
+  constructor() {
+    this.render();
+  }
+
   render() {
-    const renderHook = document.getElementById('product-container');
-    this.cart = new ShoppingCart();
-    const cartEl = this.cart.render();
-    const productList = new ProductList();
-    const prodListEl = productList.render();
-    renderHook.append(cartEl);
-    renderHook.append(prodListEl);
+    this.cart = new ShoppingCart('app');
+    new ProductList('app');
   }
 }
 
 class App {
   static cart;
+
   static init() {
     const shop = new Shop();
-    shop.render();
     this.cart = shop.cart;
   }
+  
   static addProductToCart(product) {
     this.cart.addProduct(product);
   }
