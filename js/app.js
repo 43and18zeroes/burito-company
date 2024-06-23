@@ -68,7 +68,7 @@ class ShoppingCart extends Component {
   }
 
   render() {
-    const cartEl = document.createRootElement('section', 'cart');
+    const cartEl = this.createRootElement('section', 'cart');
     cartEl.innerHTML = `
       <h2>Total: \$${0}</h2>
       <button>Order Now!</button>
@@ -89,7 +89,7 @@ class ProductItem extends Component {
   }
 
   render() {
-    const prodEl = document.createRootElement('li', 'product-item');
+    const prodEl = this.createRootElement('li', 'product-item');
     prodEl.className = 'result__card';
     prodEl.innerHTML = `
       <div class="image__container">
@@ -181,8 +181,8 @@ class Shop {
   }
 
   render() {
-    this.cart = new ShoppingCart('app');
-    new ProductList('app');
+    this.cart = new ShoppingCart('product-container');
+    new ProductList('product-container');
   }
 }
 
@@ -193,7 +193,7 @@ class App {
     const shop = new Shop();
     this.cart = shop.cart;
   }
-  
+
   static addProductToCart(product) {
     this.cart.addProduct(product);
   }
