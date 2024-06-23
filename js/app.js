@@ -14,6 +14,20 @@ class ElementAttribute {
   }
 }
 
+class Component {
+
+  constructor(renderHookId, shouldRender = true) {
+    this.hookId = renderHookId;
+    if (shouldRender) {
+      this.render();
+    }
+  }
+
+  render() {}
+
+  
+}
+
 class ShoppingCart {
   items = [];
 
