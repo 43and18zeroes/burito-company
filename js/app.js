@@ -89,8 +89,8 @@ class ProductItem extends Component {
   }
 
   render() {
-    const prodEl = this.createRootElement('li', 'product-item');
-    prodEl.className = 'result__card';
+    const prodEl = this.createRootElement('li', 'result__card');
+    // prodEl.className = 'result__card';
     prodEl.innerHTML = `
       <div class="image__container">
         <img src="${this.product.imageUrl}" alt="${this.product.title}" />
@@ -166,7 +166,7 @@ class ProductList extends Component {
   }
 
   render() {
-    this.createRootElement('ul', 'product-list', [
+    this.createRootElement('ul', 'content__results', [
       new ElementAttribute('id', 'prod-list'),
     ]);
     if (this.products && this.products.length > 0) {
