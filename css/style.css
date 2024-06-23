@@ -25,18 +25,18 @@ body main .container .div__content .content__header {
   padding: 16px;
   border: 1px solid grey;
 }
-body main .container .div__content .content__results {
+body main .container .div__content #product-container .content__results {
   margin: 0;
   border: 1px solid grey;
   padding: 16px;
 }
-body main .container .div__content .content__results .result__card {
+body main .container .div__content #product-container .content__results .result__card {
   display: flex;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
   margin-bottom: 16px;
 }
-body main .container .div__content .content__results .result__card .image__container img {
+body main .container .div__content #product-container .content__results .result__card .image__container img {
   width: 287px;
   height: 136px;
   -o-object-fit: cover;
@@ -45,12 +45,12 @@ body main .container .div__content .content__results .result__card .image__conta
      object-position: center; /* Centers the image */
   display: block;
 }
-body main .container .div__content .content__results .result__card .card__content {
+body main .container .div__content #product-container .content__results .result__card .card__content {
   display: flex;
 }
-body main .container .div__content .content__results .result__card .card__content .content__left .card__header {
+body main .container .div__content #product-container .content__results .result__card .card__content .content__left .card__header {
   display: flex;
 }
-body main .container .div__content .content__results .result__card:last-child {
+body main .container .div__content #product-container .content__results .result__card:last-child {
   margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
