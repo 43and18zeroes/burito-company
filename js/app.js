@@ -39,7 +39,7 @@ class Component {
   }
 }
 
-class ShoppingCart {
+class ShoppingCart extends Component {
   items = [];
 
   set cartItems(value) {
@@ -57,6 +57,10 @@ class ShoppingCart {
     return sum;
   }
 
+  constructor(renderHookId) {
+    super(renderHookId);
+  }
+
   addProduct(product) {
     const updatedItems = [...this.items];
     updatedItems.push(product);
@@ -64,14 +68,12 @@ class ShoppingCart {
   }
 
   render() {
-    const cartEl = document.createElement('section');
+    const cartEl = document.createElement('section', 'cart');
     cartEl.innerHTML = `
       <h2>Total: \$${0}</h2>
       <button>Order Now!</button>
     `;
-    cartEl.className = 'cart';
     this.totalOutput = cartEl.querySelector('h2');
-    return cartEl;
   }
 }
 
