@@ -215,3 +215,8 @@ const intervalId = setInterval(() => {
   console.log('This runs every 2 seconds');
 }, 2000);
 // Zum Stoppen: clearInterval(intervalId);
+
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
