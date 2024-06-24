@@ -210,3 +210,8 @@ App.init();
 setTimeout(() => {
   console.log('Hello after 2 seconds');
 }, 2000);
+
+const intervalId = setInterval(() => {
+  console.log('This runs every 2 seconds');
+}, 2000);
+// Zum Stoppen: clearInterval(intervalId);
