@@ -216,7 +216,15 @@ const intervalId = setInterval(() => {
 }, 2000);
 // Zum Stoppen: clearInterval(intervalId);
 
-fetch('https://api.example.com/data')
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+
+
+const promise = new Promise((resolve, reject) => {
+  // asynchrone Operation
+  if (promise) {
+      resolve('Erfolg');
+  } else {
+      reject('Fehler');
+  }
+});
+
+promise.then(result => console.log(result)).catch(error => console.error(error));
