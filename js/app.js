@@ -241,10 +241,16 @@ async function fetchData() {
 }
 fetchData();
 
-const promise1 = Promise.resolve(42);
-const promise2 = Promise.reject('Error');
-const promise3 = new Promise((resolve) => setTimeout(resolve, 100, 'quick'));
-
-Promise.allSettled([promise1, promise2, promise3]).then(results => {
-    results.forEach((result) => console.log(result.status));
-});
+const xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.example.com/data', true);
+xhr.onload = function() {
+    if (xhr.status >= 200 && xhr.status < 300) {
+        console.log(JSON.parse(xhr.responseText));
+    } else {
+        console.error('Error:', xhr.statusText);
+    }
+};
+xhr.onerror = function() {
+    console.error('Request failed');
+};
+xhr.send();
