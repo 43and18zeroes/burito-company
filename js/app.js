@@ -241,11 +241,10 @@ async function fetchData() {
 }
 fetchData();
 
+const promise1 = Promise.resolve(42);
+const promise2 = Promise.reject('Error');
+const promise3 = new Promise((resolve) => setTimeout(resolve, 100, 'quick'));
 
-const promise1 = Promise.reject(0);
-const promise2 = new Promise((resolve) => setTimeout(resolve, 100, 'quick'));
-const promise3 = new Promise((resolve) => setTimeout(resolve, 500, 'slow'));
-
-Promise.any([promise1, promise2, promise3]).then(value => {
-    console.log(value); // 'quick'
+Promise.allSettled([promise1, promise2, promise3]).then(results => {
+    results.forEach((result) => console.log(result.status));
 });
