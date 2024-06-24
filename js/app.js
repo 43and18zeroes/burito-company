@@ -242,18 +242,10 @@ async function fetchData() {
 fetchData();
 
 
-Promise.all([promise1, promise2, promise3]).then(values => {
-    console.log(values);
-});
+const promise1 = Promise.reject(0);
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, 'quick'));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, 'slow'));
 
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, 'one');
-});
-
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, 'two');
-});
-
-Promise.race([promise1, promise2]).then(value => {
-  console.log(value); // 'two'
+Promise.any([promise1, promise2, promise3]).then(value => {
+    console.log(value); // 'quick'
 });
