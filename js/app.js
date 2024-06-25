@@ -70,6 +70,7 @@ class ShoppingCart extends Component {
     const updatedItems = [...this.items];
     updatedItems.push(product);
     this.cartItems = updatedItems;
+    console.log(updatedItems);
   }
 
   render() {
