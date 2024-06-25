@@ -67,12 +67,30 @@ class ShoppingCart extends Component {
   }
 
   addProduct(product) {
-    console.log(product);
+    console.log(product.title);
+
     // const updatedItems = [...this.items];
     // updatedItems.push(product);
     // this.cartItems = updatedItems;
     // console.log(updatedItems);
   }
+
+  // addProduct(product) {
+  //   const existingProductIndex = this.items.findIndex(
+  //     (item) => item.title === product.title
+  //   );
+  //   const updatedItems = [...this.items];
+
+  //   if (existingProductIndex >= 0) {
+  //     updatedItems[existingProductIndex].quantity += 1;
+  //     updatedItems[existingProductIndex].price += product.price;
+  //   } else {
+  //     const updatedProduct = { ...product, quantity: 1 };
+  //     updatedItems.push(updatedProduct);
+  //   }
+
+  //   this.cartItems = updatedItems;
+  // }
 
   render() {
     const cartEl = this.createRootElement('section', 'cart');
