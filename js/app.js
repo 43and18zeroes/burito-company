@@ -67,10 +67,11 @@ class ShoppingCart extends Component {
   }
 
   addProduct(product) {
-    const updatedItems = [...this.items];
-    updatedItems.push(product);
-    this.cartItems = updatedItems;
-    console.log(updatedItems);
+    console.log(product);
+    // const updatedItems = [...this.items];
+    // updatedItems.push(product);
+    // this.cartItems = updatedItems;
+    // console.log(updatedItems);
   }
 
   render() {
