@@ -41,10 +41,11 @@ class Component {
 
 class ShoppingCart extends Component {
   items = [];
+  discountApplied = false;
 
   set cartItems(value) {
     this.items = value;
-    this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount.toFixed(2)}</h2>`;
+    this.updateTotal();
   }
 
   get totalAmount() {
@@ -70,15 +71,30 @@ class ShoppingCart extends Component {
     this.cartItems = [...this.items];
   }
 
+  applyDiscount() {
+    this.discountApplied = true;
+    this.updateTotal();
+  }
+
+  updateTotal() {
+    const total = this.totalAmount;
+    const discount = this.discountApplied ? total * 0.1 : 0;
+    this.totalOutput.innerHTML = `<h2>Total: \$${(total - discount).toFixed(2)}</h2>`;
+  }
+
   render() {
     const cartEl = this.createRootElement('section', 'cart');
     cartEl.innerHTML = `
       <h2>Total: \$${0}</h2>
       <button>Order Now!</button>
+      <button id="discount-btn">Apply 10% Discount</button>
     `;
     const orderButton = cartEl.querySelector('button');
     orderButton.addEventListener('click', this.orderProducts);
+    const discountButton = cartEl.querySelector('#discount-btn');
+    discountButton.addEventListener('click', this.applyDiscount.bind(this));
     this.totalOutput = cartEl.querySelector('h2');
+    this.updateTotal();
   }
 }
 
@@ -134,31 +150,31 @@ class ProductList extends Component {
         'Big Burito',
         'img/01.jpg',
         'Lorem Ipsum is simply dummy text of the printing.',
-        9.99
+        10
       ),
       new Product(
         'Saucy Burito',
         'img/02.jpg',
         'Lorem Ipsum is simply dummy text of the printing.',
-        10.99
+        20
       ),
       new Product(
         'Hot Burito',
         'img/03.jpg',
         'Lorem Ipsum is simply dummy text of the printing.',
-        11.99
+        30
       ),
       new Product(
         'Burito Bunch',
         'img/04.jpg',
         'Lorem Ipsum is simply dummy text of the printing.',
-        12.99
+        40
       ),
       new Product(
         'Burito Deluxe',
         'img/05.jpg',
         'Lorem Ipsum is simply dummy text of the printing.',
-        13.99
+        50
       ),
     ];
     this.renderProducts();
