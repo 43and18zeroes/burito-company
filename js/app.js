@@ -49,7 +49,10 @@ class ShoppingCart extends Component {
   }
 
   get totalAmount() {
-    return this.items.reduce((prevValue, curItem) => prevValue + curItem.price * curItem.quantity, 0);
+    return this.items.reduce(
+      (prevValue, curItem) => prevValue + curItem.price * curItem.quantity,
+      0
+    );
   }
 
   constructor(renderHookId) {
@@ -62,7 +65,9 @@ class ShoppingCart extends Component {
   }
 
   addProduct(product) {
-    const existingProduct = this.items.find(item => item.title === product.title);
+    const existingProduct = this.items.find(
+      item => item.title === product.title
+    );
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
@@ -79,7 +84,9 @@ class ShoppingCart extends Component {
   updateTotal() {
     const total = this.totalAmount;
     const discount = this.discountApplied ? total * 0.1 : 0;
-    this.totalOutput.innerHTML = `<h2>Total: \$${(total - discount).toFixed(2)}</h2>`;
+    this.totalOutput.innerHTML = `<h2>Total: \$${(total - discount).toFixed(
+      2
+    )}</h2>`;
   }
 
   render() {
