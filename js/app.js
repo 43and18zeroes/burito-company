@@ -44,17 +44,11 @@ class ShoppingCart extends Component {
 
   set cartItems(value) {
     this.items = value;
-    this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount.toFixed(
-      2
-    )}</h2>`;
+    this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount.toFixed(2)}</h2>`;
   }
 
   get totalAmount() {
-    const sum = this.items.reduce(
-      (prevValue, curItem) => prevValue + curItem.price * curItem.quantity,
-      0
-    );
-    return sum;
+    return this.items.reduce((prevValue, curItem) => prevValue + curItem.price * curItem.quantity, 0);
   }
 
   constructor(renderHookId) {
@@ -67,19 +61,15 @@ class ShoppingCart extends Component {
   }
 
   addProduct(product) {
-    const existingProductIndex = this.items.findIndex(
-      item => item.title === product.title
-    );
-    const updatedItems = [...this.items];
-    if (existingProductIndex >= 0) {
-      updatedItems[existingProductIndex].quantity += 1;
-      console.log('Addition', updatedItems);
+    const existingProduct = this.items.find(item => item.title === product.title);
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+      console
     } else {
-      const updatedProduct = { ...product, quantity: 1 };
-      updatedItems.push(updatedProduct);
-      console.log('First entry', updatedItems);
+      this.items.push({ ...product, quantity: 1 });
     }
-    this.cartItems = updatedItems;
+    console.log(this.items);
+    this.cartItems = [...this.items];
   }
 
   render() {
