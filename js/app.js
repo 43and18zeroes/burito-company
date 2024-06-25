@@ -50,10 +50,11 @@ class ShoppingCart extends Component {
   }
 
   get totalAmount() {
-    return this.items.reduce(
+    const sum = this.items.reduce(
       (prevValue, curItem) => prevValue + curItem.price * curItem.quantity,
       0
     );
+    return sum;
   }
 
   constructor(renderHookId) {
@@ -66,27 +67,19 @@ class ShoppingCart extends Component {
   }
 
   addProduct(product) {
-    const updatedItems = this.updateCartItems(product);
-    this.cartItems = updatedItems;
-  }
-
-  updateCartItems(product) {
     const existingProductIndex = this.items.findIndex(
-      (item) => item.title === product.title
+      item => item.title === product.title
     );
     const updatedItems = [...this.items];
-
     if (existingProductIndex >= 0) {
-      updatedItems[existingProductIndex] = {
-        ...updatedItems[existingProductIndex],
-        quantity: updatedItems[existingProductIndex].quantity + 1
-      };
+      updatedItems[existingProductIndex].quantity += 1;
+      console.log('Addition', updatedItems);
     } else {
-      updatedItems.push({ ...product, quantity: 1 });
+      const updatedProduct = { ...product, quantity: 1 };
+      updatedItems.push(updatedProduct);
+      console.log('First entry', updatedItems);
     }
-    console.log(updatedItems);
-
-    return updatedItems;
+    this.cartItems = updatedItems;
   }
 
   render() {
@@ -222,5 +215,4 @@ class App {
     this.cart.addProduct(product);
   }
 }
-
 App.init();
