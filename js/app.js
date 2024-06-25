@@ -64,11 +64,9 @@ class ShoppingCart extends Component {
     const existingProduct = this.items.find(item => item.title === product.title);
     if (existingProduct) {
       existingProduct.quantity += 1;
-      console
     } else {
       this.items.push({ ...product, quantity: 1 });
     }
-    console.log(this.items);
     this.cartItems = [...this.items];
   }
 
