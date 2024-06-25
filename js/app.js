@@ -51,7 +51,7 @@ class ShoppingCart extends Component {
 
   get totalAmount() {
     const sum = this.items.reduce(
-      (prevValue, curItem) => prevValue + curItem.price,
+      (prevValue, curItem) => prevValue + curItem.price * curItem.quantity,
       0
     );
     return sum;
@@ -62,13 +62,23 @@ class ShoppingCart extends Component {
     this.orderProducts = () => {
       console.log('Ordering...');
       console.log(this.items);
-    }
-    this.render()
+    };
+    this.render();
   }
 
   addProduct(product) {
+    const existingProductIndex = this.items.findIndex(
+      item => item.title === product.title
+    );
     const updatedItems = [...this.items];
-    updatedItems.push(product);
+    if (existingProductIndex >= 0) {
+      updatedItems[existingProductIndex].quantity += 1;
+      console.log('Addition', updatedItems);
+    } else {
+      const updatedProduct = { ...product, quantity: 1 };
+      updatedItems.push(updatedProduct);
+      console.log('First entry', updatedItems);
+    }
     this.cartItems = updatedItems;
   }
 
